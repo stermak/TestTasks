@@ -7,7 +7,25 @@
 
     <activity
         android:id="@+id/mainActivity"
-        android:name="ermak.production.task2.presentation.MainActivity"
+        android:name="ermak.production.task2.presentation.ui.activity.MainActivity"
         android:label="activity_main"
         tools:layout="@layout/activity_main" />
+    <fragment
+        android:id="@+id/firstFragment"
+        android:name="ermak.production.task2.presentation.ui.fragments.FirstFragment"
+        android:label="fragment_first"
+        tools:layout="@layout/fragment_first" >
+        <action
+            android:id="@+id/action_firstFragment_to_mainActivity"
+            app:destination="@id/mainActivity" />
+    </fragment>
+    <fragment
+        android:id="@+id/secondFragment"
+        android:name="ermak.production.task2.presentation.ui.fragments.SecondFragment"
+        android:label="fragment_second"
+        tools:layout="@layout/fragment_second" >
+        <action
+            android:id="@+id/action_secondFragment_to_mainActivity2"
+            app:destination="@id/mainActivity" />
+    </fragment>
 </navigation>
